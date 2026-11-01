@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Andarna — Criar Conta</title>
+</head>
+<body>
+    <a href="#conteudo-principal">Pular para o conteúdo principal</a>
+
+    <header>
+        <h1>Andarna</h1>
+        
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="estante.html">Minha Estante</a></li>
+                <li><a href="cadastro-livro.html">Adicionar Livro</a></li>
+                <li><a href="perfil.html" aria-current="page">Criar Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <h2>Criar sua Conta</h2>
+        <p>Registe o seu perfil para desbloquear a sua estante de leituras.</p>
+
+        <form action="#" method="POST">
+            <div>
+                <label for="nome">Nome Completo:</label><br>
+                <input type="text" id="nome" name="nome" required>
+            </div>
+            <br>
+            <div>
+                <label for="email">E-mail:</label><br>
+                <input type="email" id="email" name="email" required>
+            </div>
+            <br>
+            <div>
+                <label for="senha">Senha:</label><br>
+                <input type="password" id="senha" name="senha" required minlength="6">
+            </div>
+            <br>
+            <div>
+                <button type="submit">Criar Conta</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Andarna. Projeto Integrador - Sistemas de Informação.</p>
+    </footer>
+</body>
+</html>
