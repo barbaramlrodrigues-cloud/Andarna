@@ -1,0 +1,225 @@
+:root {
+    --cor-fundo: #ffffff;
+    --cor-card: #ffffff;
+    --cor-texto: #111111;
+    --cor-primaria: #1a1a1a;
+    --cor-dourado: #c59b27;
+    --cor-dourado-hover: #a17d1e;
+    --espacamento-padrao: 1.5rem;
+    --raio-borda: 8px;
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    background-color: var(--cor-fundo);
+    color: var(--cor-texto);
+    line-height: 1.6;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+.skip-link {
+    position: absolute;
+    top: -40px;
+    left: 0;
+    background: var(--cor-dourado);
+    color: #000;
+    font-weight: bold;
+    padding: 8px;
+    z-index: 100;
+    transition: top 0.3s;
+}
+.skip-link:focus {
+    top: 0;
+}
+
+.site-header {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    padding: 1.25rem 1rem;
+    border-bottom: 3px solid var(--cor-dourado);
+}
+
+.header-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.logo-area {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.dragon-icon {
+    color: var(--cor-dourado);
+    flex-shrink: 0;
+}
+
+.site-header h1 {
+    font-size: 1.8rem;
+    color: #ffffff;
+}
+
+.site-header nav ul {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+}
+
+.site-header nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    transition: background-color 0.2s, color 0.2s;
+}
+
+.site-header nav a:hover,
+.site-header nav a[aria-current="page"] {
+    background-color: var(--cor-dourado);
+    color: #000000;
+}
+
+.main-container {
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    flex: 1;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+}
+
+.main-container h2 {
+    color: var(--cor-primaria);
+    border-bottom: 2px solid var(--cor-dourado);
+    padding-bottom: 0.5rem;
+    margin-bottom: 1rem;
+}
+
+.grid-cards {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+    margin-top: 1rem;
+}
+
+.card {
+    background-color: var(--cor-card);
+    border: 1px solid #dcdcdc;
+    border-top: 4px solid var(--cor-dourado);
+    border-radius: var(--raio-borda);
+    padding: var(--espacamento-padrao);
+    box-shadow: 0 2px 6px rgba(0,0,0,0.04);
+}
+
+.card h3, .card h4 {
+    color: var(--cor-primaria);
+    margin-bottom: 0.3rem;
+}
+
+.btn {
+    display: inline-block;
+    margin-top: 1rem;
+    background-color: var(--cor-dourado);
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    text-decoration: none;
+    font-weight: 700;
+    transition: background-color 0.2s;
+}
+.btn:hover {
+    background-color: var(--cor-dourado-hover);
+}
+
+.form-cadastro {
+    background-color: var(--cor-card);
+    padding: 2rem;
+    border-radius: var(--raio-borda);
+    border: 1px solid #dcdcdc;
+    border-top: 4px solid var(--cor-dourado);
+    max-width: 600px;
+}
+
+.form-group {
+    margin-bottom: 1.25rem;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 600;
+    color: var(--cor-texto);
+}
+
+.form-group input,
+.form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #b0b0b0;
+    border-radius: 4px;
+    font-size: 1rem;
+    background-color: #ffffff;
+    color: #000000;
+}
+
+.btn-submit {
+    background-color: var(--cor-dourado);
+    color: #000000;
+    border: none;
+    padding: 0.75rem 1.5rem;
+    font-size: 1rem;
+    font-weight: 700;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+}
+.btn-submit:hover {
+    background-color: var(--cor-dourado-hover);
+}
+
+.site-footer {
+    background-color: var(--cor-primaria);
+    color: #ffffff;
+    text-align: center;
+    padding: 1.5rem;
+    margin-top: auto;
+    font-size: 0.9rem;
+    border-top: 3px solid var(--cor-dourado);
+}
+
+/* Breakpoints (Entrega 2) */
+@media (min-width: 768px) {
+    .header-container {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .grid-cards {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 1200px) {
+    .main-container {
+        display: grid;
+        grid-template-columns: 3fr 1fr;
+        gap: 2rem;
+    }
+}
