@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Andarna — Criar Conta</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <a href="#conteudo-principal" class="skip-link">Pular para o conteúdo principal</a>
+
+    <header>
+        <div class="topo-marca">
+            <svg class="icone-dragao" viewBox="0 0 24 24" width="28" height="28" aria-hidden="true">
+                <path fill="currentColor" d="M19,14C20.5,12.5 21,10 20,8C19,6 16.5,5.5 15,6C13.5,4 11,3 9,4C6.5,5 5,7.5 5,10C3.5,10.5 2,12 2,14C2,16 3.5,17.5 5,18H19C20.5,18 22,16.5 22,15C22,14.5 21.8,14.2 21.5,14H19M7,12C7,10.9 7.9,10 9,10C10.1,10 11,10.9 11,12C11,13.1 10.1,14 9,14C7.9,14 7,13.1 7,12Z" />
+            </svg>
+            <h1>Andarna</h1>
+        </div>
+        
+        <nav aria-label="Navegação Principal">
+            <ul>
+                <li><a href="index.html">Início</a></li>
+                <li><a href="estante.html">Minha Estante</a></li>
+                <li><a href="cadastro-livro.html">Adicionar Livro</a></li>
+                <li><a href="perfil.html" aria-current="page">Criar Conta</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main id="conteudo-principal">
+        <h2>Criar sua Conta</h2>
+        <p>Registe o seu perfil para desbloquear a sua estante de leituras.</p>
+
+        <form action="estante.html" method="get">
+            <div class="campo">
+                <label for="nome">Nome Completo:</label>
+                <input type="text" id="nome" name="nome" autocomplete="name" required minlength="3" placeholder="Seu nome completo">
+            </div>
+
+            <div class="campo">
+                <label for="email">E-mail:</label>
+                <input type="email" id="email" name="email" autocomplete="email" required placeholder="seu@email.com">
+            </div>
+
+            <div class="campo">
+                <label for="senha">Senha:</label>
+                <input type="password" id="senha" name="senha" autocomplete="new-password" required minlength="6" placeholder="Mínimo de 6 caracteres">
+            </div>
+
+            <div class="campo">
+                <button type="submit">Criar Conta</button>
+            </div>
+        </form>
+    </main>
+
+    <footer>
+        <p>&copy; 2026 Andarna. Projeto Integrador - Sistemas de Informação.</p>
+    </footer>
+</body>
+</html>
